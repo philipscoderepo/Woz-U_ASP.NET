@@ -1,0 +1,10 @@
+﻿@model SecurityFromScratch.Models.SecurityModel
+
+<form>
+    PlainText: <textarea id="PlainText" name="PlainText">@Model?.PlainText</textarea><br />
+    ProtectedText: <textarea id="ProtectedText" name="ProtectedText">@Model?.ProtectedText</textarea><br />
+    Mechanism: <input id="MethodText" name="MethodText" value="@Model?.MethodText" /><br />
+
+    <input type="submit" id="Protect" value="Protect" formaction="/Security/Protect" formmethod="post" />
+    <input type="submit" id="UnProtect" value="UnProtect" formaction="/Security/Unprotect" formmethod="post" />
+</form>

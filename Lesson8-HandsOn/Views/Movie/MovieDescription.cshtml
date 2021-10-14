@@ -1,0 +1,18 @@
+﻿@model Lesson8_HandsOn.Models.Movie
+
+@{
+    ViewData["Title"] = "MovieDescription";
+}
+
+<div class="description-container">
+    <div>
+        <img src="~/css/movie_img/@Model.Img_Src" class="description-img" />
+    </div>
+    <div class="description">
+        @Model.Description
+        <br />
+        <!--onclick add to watch list for the user and update the watched list-->
+        <a asp-controller="Movie" asp-action="Watch" asp-route-id="@Model.Id"><div class="watch-button">Watch</div></a>
+    </div>
+
+</div>

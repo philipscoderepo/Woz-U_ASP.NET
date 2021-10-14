@@ -1,0 +1,54 @@
+@model Lesson6_HandsOn.Models.Alien
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Alien</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NumArms" class="control-label"></label>
+                <input asp-for="NumArms" class="form-control" />
+                <span asp-validation-for="NumArms" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumHeads" class="control-label"></label>
+                <input asp-for="NumHeads" class="form-control" />
+                <span asp-validation-for="NumHeads" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumLegs" class="control-label"></label>
+                <input asp-for="NumLegs" class="form-control" />
+                <span asp-validation-for="NumLegs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlanetOfOrigin" class="control-label"></label>
+                <select asp-for="PlanetOfOrigin" class="form-control"></select>
+                <span asp-validation-for="PlanetOfOrigin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

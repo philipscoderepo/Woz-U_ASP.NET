@@ -1,0 +1,194 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 07:22:54.289
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: Tls12
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 ?bits
+Key Exchange: ECDHE_RSA (0xae06) 384bits
+
+== Server Certificate ==========
+[Version]
+  V3
+
+[Subject]
+  CN=in.applicationinsights.azure.com
+  Simple Name: in.applicationinsights.azure.com
+  DNS Name: in.applicationinsights.azure.com
+
+[Issuer]
+  CN=Microsoft RSA TLS CA 01, O=Microsoft Corporation, C=US
+  Simple Name: Microsoft RSA TLS CA 01
+  DNS Name: Microsoft RSA TLS CA 01
+
+[Serial Number]
+  12001455AD9A2E6987DB02A3870000001455AD
+
+[Not Before]
+  7/22/2021 3:21:21 PM
+
+[Not After]
+  7/22/2022 3:21:21 PM
+
+[Thumbprint]
+  7BB4FC2253F2891D252BE5189C8745C08BF0DC36
+
+[Signature Algorithm]
+  sha256RSA(1.2.840.113549.1.1.11)
+
+[Public Key]
+  Algorithm: RSA
+  Length: 2048
+  Key Blob: 30 82 01 0a 02 82 01 01 00 f4 5b aa 90 86 97 62 12 00 a6 da 9e 14 44 46 52 7a 29 f6 85 b4 8f 27 3d 77 7c f8 1f 9d 60 61 8f f2 f2 52 a2 47 df 65 15 1d 2f 31 91 bc 6f 29 a2 4f f1 74 90 93 e7 a6 95 ea 1f a4 04 4c 59 68 71 b3 ed b1 80 3c 38 3a aa cc 36 79 c9 0a ee 52 2d ae 7f a2 cc 91 e9 45 f3 45 ae 88 dc f8 87 be e3 76 7a 20 08 e3 fd fe e9 4d e5 40 b6 81 db cc fe 7c 53 d0 bf 80 67 ff fd 6f 8b 6c d8 c4 2c 4e 2d 57 d2 b5 d1 7a b1 b6 f3 41 d2 9b b7 1f 3f e1 66 f6 06 33 47 d8 59 55 c1 5f 64 24 bc be 09 35 ed 44 04 26 2d 07 98 e9 a7 d1 05 ce 0a e7 1a e9 3c 73 f9 4c 5c cc b6 b8 24 c5 c5 d7 fc 18 55 29 bb 9b 4e f4 b6 fe e8 9f bf bf b9 7e dd f3 df 81 c8 f0 c2 18 3b 65 66 7f 29 78 3e f6 37 d6 23 c6 1b c1 4b a7 77 e5 9c 42 6e e0 8b 13 47 f9 d3 32 d3 59 62 bd 84 1a 9c e4 0e 3b 0d 42 dd 0e 0a d3 6d 02 03 01 00 01
+  Parameters: 05 00
+
+[Extensions]
+* SCT List(1.3.6.1.4.1.11129.2.4.2):
+  v1
+2979bef09e393921f056739f63a577e5be577d9c600af8f94d5d265c255dc784
+‎Thursday, ‎July ‎22, ‎2021 3:31:26 PM
+SHA256
+ECDSA
+304502207fcdd69480e5922fb0c7a6dc5ed2af2b4e854338b506d2b757c29caacd2d482f022100aa6fbd016e788b227faf566416719908393b7d1f726fa6a14e5abec55ff55a63
+
+v1
+41c8cab1df22464a10c6a13a0942875e4e318b1b03ebeb4bc768f090629606f6
+‎Thursday, ‎July ‎22, ‎2021 3:31:26 PM
+SHA256
+ECDSA
+3045022100a892359d1b71755e141808888ecc58d910ca6c4d86acf343c40e2a16f3c0bf9302206a895c66cbd74ef57b8772f4cbf663ea07f6200c855ab3765abdc2eea4ad212a
+
+v1
+5581d4c2169036014aea0b9b573c53f0c0e43878702508172fa3aa1d0713d30c
+‎Thursday, ‎July ‎22, ‎2021 3:31:27 PM
+SHA256
+ECDSA
+3044022040e573ba0af06f29dfccca754ffc0ba76fbefb3ca30eaa74bdaaf51d22ae1f160220209918de88210318118e9e1e308761330c4761e36e3477a7e07a704e82569b58
+
+* Application Policies(1.3.6.1.4.1.311.21.10):
+  [1]Application Certificate Policy:
+     Policy Identifier=Server Authentication
+[2]Application Certificate Policy:
+     Policy Identifier=Client Authentication
+
+* Certificate Template Information(1.3.6.1.4.1.311.21.7):
+  Template=1.3.6.1.4.1.311.21.8.16155509.8105089.5391003.2969441.12400096.221.10585921.15764560
+Major Version Number=100
+Minor Version Number=39
+
+* Authority Information Access(1.3.6.1.5.5.7.1.1):
+  [1]Authority Info Access
+     Access Method=Certification Authority Issuer (1.3.6.1.5.5.7.48.2)
+     Alternative Name:
+          URL=http://www.microsoft.com/pki/mscorp/Microsoft RSA TLS CA 01.crt (http://www.microsoft.com/pki/mscorp/Microsoft%20RSA%20TLS%20CA%2001.crt)
+[2]Authority Info Access
+     Access Method=On-line Certificate Status Protocol (1.3.6.1.5.5.7.48.1)
+     Alternative Name:
+          URL=http://ocsp.msocsp.com
+
+* Subject Key Identifier(2.5.29.14):
+  a4aac172e99b0145579dc8e55e9740bebec47b1d
+
+* Key Usage(2.5.29.15):
+  Digital Signature, Key Encipherment, Data Encipherment (b0)
+
+* Subject Alternative Name(2.5.29.17):
+  DNS Name=in.applicationinsights.azure.com
+DNS Name=*.in.applicationinsights.azure.com
+DNS Name=dc.applicationinsights.microsoft.com
+DNS Name=dc.applicationinsights.azure.com
+DNS Name=dc.services.visualstudio.com
+DNS Name=ausse-breeziest-in.cloudapp.net
+DNS Name=brzs-breeziest-in.cloudapp.net
+DNS Name=cca-breeziest-in.cloudapp.net
+DNS Name=cfr-breeziest-in.cloudapp.net
+DNS Name=cin-breeziest-in.cloudapp.net
+DNS Name=cko-breeziest-in.cloudapp.net
+DNS Name=cus-breeziest-in.cloudapp.net
+DNS Name=eas-breeziest-in.cloudapp.net
+DNS Name=eau-breeziest-in.cloudapp.net
+DNS Name=ejp-breeziest-in.cloudapp.net
+DNS Name=eus-breeziest-in.cloudapp.net
+DNS Name=eus02-breeziest-in.cloudapp.net
+DNS Name=eus03-breeziest-in.cloudapp.net
+DNS Name=eus04-breeziest-in.cloudapp.net
+DNS Name=eus05-breeziest-in.cloudapp.net
+DNS Name=eus2-breeziest-in.cloudapp.net
+DNS Name=ncus-breeziest-in.cloudapp.net
+DNS Name=neu-breeziest-in.cloudapp.net
+DNS Name=safn-breeziest-in.cloudapp.net
+DNS Name=scus-breeziest-in.cloudapp.net
+DNS Name=sea-breeziest-in.cloudapp.net
+DNS Name=suk-breeziest-in.cloudapp.net
+DNS Name=swn-breeziest-in.cloudapp.net
+DNS Name=weu-breeziest-in.cloudapp.net
+DNS Name=weu02-breeziest-in.cloudapp.net
+DNS Name=weu03-breeziest-in.cloudapp.net
+DNS Name=wus-breeziest-in.cloudapp.net
+DNS Name=wus2-breeziest-in.cloudapp.net
+DNS Name=wus202-breeziest-in.cloudapp.net
+
+* CRL Distribution Points(2.5.29.31):
+  [1]CRL Distribution Point
+     Distribution Point Name:
+          Full Name:
+               URL=http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft RSA TLS CA 01.crl (http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20RSA%20TLS%20CA%2001.crl)
+               URL=http://crl.microsoft.com/pki/mscorp/crl/Microsoft RSA TLS CA 01.crl (http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20RSA%20TLS%20CA%2001.crl)
+
+* Certificate Policies(2.5.29.32):
+  [1]Certificate Policy:
+     Policy Identifier=1.3.6.1.4.1.311.42.1
+     [1,1]Policy Qualifier Info:
+          Policy Qualifier Id=CPS
+          Qualifier:
+               http://www.microsoft.com/pki/mscorp/cps
+[2]Certificate Policy:
+     Policy Identifier=2.23.140.1.2.1
+
+* Authority Key Identifier(2.5.29.35):
+  KeyID=b5760c3011cec792424d4cc75c2cc8a90ce80b64
+
+* Enhanced Key Usage(2.5.29.37):
+  Server Authentication (1.3.6.1.5.5.7.3.1)
+Client Authentication (1.3.6.1.5.5.7.3.2)
+
+
+[SubjectAltNames]
+DNS Name=in.applicationinsights.azure.com
+DNS Name=*.in.applicationinsights.azure.com
+DNS Name=dc.applicationinsights.microsoft.com
+DNS Name=dc.applicationinsights.azure.com
+DNS Name=dc.services.visualstudio.com
+DNS Name=ausse-breeziest-in.cloudapp.net
+DNS Name=brzs-breeziest-in.cloudapp.net
+DNS Name=cca-breeziest-in.cloudapp.net
+DNS Name=cfr-breeziest-in.cloudapp.net
+DNS Name=cin-breeziest-in.cloudapp.net
+DNS Name=cko-breeziest-in.cloudapp.net
+DNS Name=cus-breeziest-in.cloudapp.net
+DNS Name=eas-breeziest-in.cloudapp.net
+DNS Name=eau-breeziest-in.cloudapp.net
+DNS Name=ejp-breeziest-in.cloudapp.net
+DNS Name=eus-breeziest-in.cloudapp.net
+DNS Name=eus02-breeziest-in.cloudapp.net
+DNS Name=eus03-breeziest-in.cloudapp.net
+DNS Name=eus04-breeziest-in.cloudapp.net
+DNS Name=eus05-breeziest-in.cloudapp.net
+DNS Name=eus2-breeziest-in.cloudapp.net
+DNS Name=ncus-breeziest-in.cloudapp.net
+DNS Name=neu-breeziest-in.cloudapp.net
+DNS Name=safn-breeziest-in.cloudapp.net
+DNS Name=scus-breeziest-in.cloudapp.net
+DNS Name=sea-breeziest-in.cloudapp.net
+DNS Name=suk-breeziest-in.cloudapp.net
+DNS Name=swn-breeziest-in.cloudapp.net
+DNS Name=weu-breeziest-in.cloudapp.net
+DNS Name=weu02-breeziest-in.cloudapp.net
+DNS Name=weu03-breeziest-in.cloudapp.net
+DNS Name=wus-breeziest-in.cloudapp.net
+DNS Name=wus2-breeziest-in.cloudapp.net
+DNS Name=wus202-breeziest-in.cloudapp.net
+

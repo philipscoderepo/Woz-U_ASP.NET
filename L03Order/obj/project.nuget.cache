@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oP/i7E+4G/stu9+4MSxKhxPBPYZnvCPlE5L5gnaM7irPK7UNPhlbfWHkoA1y6l5ff6ePy1lRJ2Yp+awqKzkCLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\L03Order\\L03Order.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\patas\\.nuget\\packages\\walters_rebootconsulting.logger\\1.0.2\\walters_rebootconsulting.logger.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

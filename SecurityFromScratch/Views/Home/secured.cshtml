@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+This is the secured page. You can only access it if you passed authentication
+<a href="\">Click here to go back to the root</a>
+
+User: @(User)
+<br />
+User.Identity: @(User?.Identity?.ToString()??"NULL")
+<br />
+User.Identity.Name: @(User?.Identity?.Name??"NULL")
+<br />
+User.Identity.IsAuthenticated: @(User?.Identity?.IsAuthenticated.ToString()??"NULL")
+<br />
+User.Identity.AuthenticationType: @(User.Identity.AuthenticationType??"NULL")
+<br />
+
+Cookies.Count @this.Context.Request.Cookies.Count
+<br />
+<hr />
+@foreach (var c in Context.Request.Cookies)
+{<p>Cookie: @(c)</p>}
+<hr />
+
+Claims.Count: @(User.Claims.Count())
+<br />
+<hr />
+@foreach (var s in User.Claims)
+{<p>Clain: @(s)</p>}
+
+<hr />
+<a href="\Home\secured">Click here to access the secured page</a>
+<br />
+<br />
+<a href="\Home\logout">Click here to logout</a>
+<br />
+<a href="\Home\login">Click here to login</a>
+<br />
+

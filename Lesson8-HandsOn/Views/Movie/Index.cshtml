@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Lesson8_HandsOn.Models.Movie>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <!--if signed in maybe redirect to the display movies page-->
+    <!--else tell the user to sign in to watch movies and display a list of available movies-->
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h1 class="display-4">Click To Watch Something!</h1>
+        <div class="movie-container">
+            <!--for each movie-->
+            @foreach (var item in Model)
+            {
+                <div class="movie">
+                    <a asp-controller="Movie" asp-action="MovieDescription" asp-route-id="@item.Id">
+                        <img src="~/css/movie_img/@item.Img_Src" class="movie-img" />
+                    </a>
+                </div>
+            }
+
+            <!--when clicked redirect to a description and option to watch-->
+        </div>
+    }
+    else
+    {
+        <h1 class="display-4">Sign In To Watch!</h1>
+        <div class="movie-container">
+            <!--for each movie-->
+            @foreach (var item in Model)
+            {
+            <div class="movie">
+                <a href="Identity/Account/Register">
+                    <img src="~/css/movie_img/@item.Img_Src" class="movie-img" />
+                </a>
+            </div>
+            }
+            
+            <!--when clicked take them to the register account page-->
+        </div>
+    }
+
+</div>

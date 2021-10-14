@@ -1,0 +1,21 @@
+﻿@model List<Lesson8_HandsOn.Models.Movie>
+
+<div>
+    @if(Model == null)
+    {
+        <div>No Movies watched</div>
+    }else
+    {
+        <div class="movie-container">
+            @foreach(var m in Model)
+                {
+                    <div class="movie">
+                        <a asp-controller="Movie" asp-action="MovieDescription" asp-route-id="@m.Id">
+                            <img src="~/css/movie_img/@m.Img_Src" class="movie-img" />
+                        </a>
+                    </div>
+                }
+        </div>
+            
+    }
+</div>

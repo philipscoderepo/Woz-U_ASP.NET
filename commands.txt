@@ -1,0 +1,42 @@
+dotnet new mvc
+
+new empty web project cmd 'dotnet new web'
+
+dotnet add package walters_rebootconsulting.logger
+
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
+//Lesson 6: Entity Framework
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+//if not already installed
+dotnet tool install --global dotnet-aspnet-codegenerator
+
+dotnet ef dbcontext scaffold "Data Source=/Users/cassandramatos/Desktop/Programming/CSharp/Scaffold/chinook.db" Microsoft.EntityFrameworkCore.Sqlite -c ApplicationDbContext -f -o Models -t customers -t tracks --use-database-names
+
+//add to startup
+using System.IO;
+using Microsoft.EntityFrameworkCore;
+using ScaffoldExistingExample.Models;
+
+//after the models have been created
+//if not already installed
+dotnet tool install --global dotnet-ef
+dotnet restore
+dotnet ef migrations add InitialMigration
+dotnet ef database update
+
+//controller code generator (* place holder example)
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet aspnet-codegenerator controller -name *ContactsController -m *Contact -dc *ContactsContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+
+dotnet aspnet-codegenerator controller -name AlienController -m Alien -dc AlienContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+
+//controllers
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+//customer
+dotnet aspnet-codegenerator controller -name CustomersController -m customer -dc ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+//track
+dotnet aspnet-codegenerator controller -name TracksController -m track -dc ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries

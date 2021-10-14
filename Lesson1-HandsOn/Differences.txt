@@ -1,0 +1,14 @@
+The mvc project contains multiple file directories that were not generated in the empty web app. 
+These include:
+- Controllers
+- Models
+- Views
+- wwwroot
+
+The program.cs files are the same, but the startup.cs files are different. The empty web app startup.cs is missing function declarations of IConfiguration, ConfigureServices, and the Configure function does not use Https or authorization functions from app. The file is also missing some dependecies: 
+- Microsoft.AspNetCore.HttpsPolicy 
+- Microsoft.Extensions.Configuration 
+
+and has a different one: 
+- Microsoft.AspNetCore.Http
+

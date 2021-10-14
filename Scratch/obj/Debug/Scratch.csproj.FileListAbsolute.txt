@@ -1,0 +1,7 @@
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\bin\Debug\Scratch.exe.config
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\bin\Debug\Scratch.exe
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\bin\Debug\Scratch.pdb
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\obj\Debug\Scratch.csproj.AssemblyReference.cache
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\obj\Debug\Scratch.csproj.CoreCompileInputs.cache
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\obj\Debug\Scratch.exe
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Scratch\obj\Debug\Scratch.pdb
