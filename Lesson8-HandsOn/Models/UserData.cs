@@ -7,20 +7,21 @@ namespace Lesson8_HandsOn.Models
 {
     public class UserData
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string MoviesWatched { get; set; }
         public string Email { get; set; }
 
-        public static List<int> ParseId(string MoviesWatched)
+        //Returns a deserialized list of ints which represent movie IDs
+        public List<int> ParseId()
         {
             List<int> Ids = new List<int>();
             //serialized format "id,id,id,..."
-            if(MoviesWatched == null)
+            if(this.MoviesWatched == null)
             {
                 return null;
             }else
             {
-                string[] sIds = MoviesWatched.Split(',');
+                string[] sIds = this.MoviesWatched.Split(',');
                 for(int i=0; i<sIds.Length; i++)
                 {
                     int temp;
@@ -30,7 +31,6 @@ namespace Lesson8_HandsOn.Models
                     }
                 }
             }
-            
             return Ids;
         }
     }

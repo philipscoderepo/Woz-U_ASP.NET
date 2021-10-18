@@ -14,88 +14,106 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Lesson8_HandsOn.Controllers
 {
+    //Handles operations with Movies
     public class MovieController : Controller
     {
         private readonly MovieContext _context;
+        private readonly UserDataContext _userDataContext;
         
-        public MovieController(MovieContext context)
+        public MovieController(MovieContext context, UserDataContext userDataContext)
         {
-            _context = context;    
+            _context = context;
+            _userDataContext = userDataContext;
         }
 
         // GET: Movie
+        //Available to anyone who accesses the website
+        //---------------------------------------------------------
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.Movies.ToListAsync());
         }
 
-        public async Task<IActionResult> WatchAgain()
-        {
-            string Ids = TempData["Ids"] as string;
-            Console.WriteLine("Ids: " + Ids);
-            List<int> ids = UserData.ParseId(Ids);
-            List<Movie> moviesWatched = new List<Movie>();
-            var movies = await _context.Movies.ToListAsync();
-            foreach (var m in movies)
-            {
-                if (ids.Contains(m.Id))
-                {
-                    moviesWatched.Add(m);
-                }
-            }
-            return View(moviesWatched);
-        }
+        //Registered User only pages
+        //---------------------------------------------------------
 
-        [Authorize(Roles = "Manager")]
-        public async Task<IActionResult> ManagerIndex()
-        {
-            return View(await _context.Movies.ToListAsync());
-        }
-
-        [Authorize(Roles = "Manager, User")]
+        [Authorize]
+        //Pulls the description for the movie at that id
         public async Task<IActionResult> MovieDescription(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return View(null);
             }
 
             var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
-                return NotFound();
+                return View(null);
             }
 
             return View(movie);
         }
 
-        //public async Task<IActionResult> WatchAgain()
-        //{
-            //return a list of movies based on 
-            //a list of ID's from UserData
-            //check each id with MovieExists()
-            //and add it to the list if it's found
-        //}
-
-        [Authorize(Roles = "Manager, User")]
+        [Authorize]
+        //User can watch the movie, and the movie gets added to their watch again list
         public async Task<IActionResult> Watch(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return View(null);
             }
 
             var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
-                return NotFound();
+                return View(null);
             }
 
-            //probably have to 
+            //get the current signed in user
+            var username = User.Identity.Name;
+            //if the user is not found in the DB then add an entry
+            var userData = await _userDataContext.UserData.FirstOrDefaultAsync(m => m.Email == username);
+            if (userData == null)
+            {
+                //first get the current list of users
+                var users = await _userDataContext.UserData.ToListAsync();
+                //create a new user
+                UserData newUserEntry = new()
+                {
+                    Id = users.Count + 1,
+                    Email = username,
+                    MoviesWatched = id.ToString() + ","
+                };
+
+                await _userDataContext.AddAsync(newUserEntry);
+                await _userDataContext.SaveChangesAsync();
+            }
+            else
+            {
+                var Ids = userData.ParseId();
+                if (!Ids.Contains((int)id))
+                {
+                    userData.MoviesWatched += id.ToString() + ",";
+                }
+                _userDataContext.Update(userData);
+                await _userDataContext.SaveChangesAsync();
+            }
 
             return View(movie);
+        }
+
+        //Manager Only Pages
+        //--------------------------------------------------------
+
+        //list of movies available
+        [Authorize(Roles = "Manager")]
+        public async Task<IActionResult> ModifyMovies()
+        {
+            return View(await _context.Movies.ToListAsync());
         }
 
         // GET: Movie/Details/5

@@ -6,18 +6,31 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lesson8_HandsOn.Models;
+using Lesson8_HandsOn.Controllers;
+//added for login
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace Lesson8_HandsOn.Controllers
 {
+    //Handles operations with UserData
     public class UserDataController : Controller
     {
         private readonly UserDataContext _context;
+        private readonly MovieContext _movieContext;
 
-        public UserDataController(UserDataContext context)
+        public UserDataController(UserDataContext context, MovieContext movieContext) 
         {
             _context = context;
+            _movieContext = movieContext;
         }
 
+        //Registered User Only Pages
+        //------------------------------------------------------------------
+
+        [Authorize]
         public async Task<IActionResult> WatchAgain()
         {
             //get the user id from the current signed in user
@@ -25,39 +38,85 @@ namespace Lesson8_HandsOn.Controllers
 
             if (!UserNameExists(userName))
             {
-                return NotFound();
+                return View(null);
             }
 
             var userData = await _context.UserData
-                .FirstOrDefaultAsync(m => m.Email == userName);
+            .FirstOrDefaultAsync(m => m.Email == userName);
             if (userData == null)
             {
-                return NotFound();
+                //they haven't watched any movies yet
+                return View(null);
             }
-            Console.WriteLine(userData.MoviesWatched);
-            TempData["Ids"] = userData.MoviesWatched;
-            return RedirectToAction("WatchAgain", "Movie");
+
+            List<int> ids = userData.ParseId();
+            //store the list of 
+            List<Movie> moviesWatched = new List<Movie>();
+            //get the list of movies from the DB
+            var movies = await _movieContext.Movies.ToListAsync();
+            foreach (var m in movies)
+            {
+                if (ids.Contains(m.Id))
+                {
+                    moviesWatched.Add(m);
+                }
+            }
+            return View(moviesWatched);
         }
 
+        //Manager Only Pages
+        //------------------------------------------------------------------
 
-        private bool UserNameExists(string id)
+        [Authorize(Roles = "Manager")]
+        public async Task<IActionResult> ViewUserData()
         {
-            return _context.UserData.Any(e => e.Email == id);
+            List<UserData> users = await _context.UserData.ToListAsync();
+            List<Movie> movies = await _movieContext.Movies.ToListAsync();
+            //<Email, Movie>
+            Dictionary<string, List<Movie>> userData = new Dictionary<string, List<Movie>>();
+            foreach (var u in users)
+            {
+                List<int> ids = u.ParseId();
+                //store the list of 
+                List<Movie> moviesWatched = new List<Movie>();
+                //get the list of movies from the DB
+                foreach (var m in movies)
+                {
+                    if (ids.Contains(m.Id))
+                    {
+                        moviesWatched.Add(m);
+                    }
+                }
+                userData.Add(u.Email, moviesWatched);
+            }
+
+            return View(userData);
         }
 
+        private bool UserNameExists(string email)
+        {
+            return _context.UserData.Any(e => e.Email == email);
+        }
 
+        private bool UserDataExists(int? id)
+        {
+            return _context.UserData.Any(e => e.Id == id);
+        }
 
-
-
+        //The functions below were auto generated and only used for testing
+        //------------------------------------------------------------------
 
         // GET: UserData
+        //use new keyword since we are inheriting 
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.UserData.ToListAsync());
         }
 
         // GET: UserData/Details/5
-        public async Task<IActionResult> Details(string id)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -75,6 +134,7 @@ namespace Lesson8_HandsOn.Controllers
         }
 
         // GET: UserData/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -85,6 +145,7 @@ namespace Lesson8_HandsOn.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,MoviesWatched")] UserData userData)
         {
             if (ModelState.IsValid)
@@ -97,7 +158,8 @@ namespace Lesson8_HandsOn.Controllers
         }
 
         // GET: UserData/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -117,7 +179,8 @@ namespace Lesson8_HandsOn.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,MoviesWatched")] UserData userData)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Edit(int? id, [Bind("Id,MoviesWatched")] UserData userData)
         {
             if (id != userData.Id)
             {
@@ -148,7 +211,8 @@ namespace Lesson8_HandsOn.Controllers
         }
 
         // GET: UserData/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -168,17 +232,13 @@ namespace Lesson8_HandsOn.Controllers
         // POST: UserData/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
             var userData = await _context.UserData.FindAsync(id);
             _context.UserData.Remove(userData);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool UserDataExists(string id)
-        {
-            return _context.UserData.Any(e => e.Id == id);
         }
     }
 }

@@ -184,11 +184,12 @@ C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\o
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\Details.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\Edit.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\MovieDescription.cshtml.g.cs
-C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\ManagerIndex.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\Watch.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\Create.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\Delete.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\Details.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\Edit.cshtml.g.cs
 C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\Index.cshtml.g.cs
-C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\WatchAgain.cshtml.g.cs
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\WatchAgain.cshtml.g.cs
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\Movie\ModifyMovies.cshtml.g.cs
+C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson8-HandsOn\obj\Debug\net5.0\Razor\Views\UserData\ViewUserData.cshtml.g.cs

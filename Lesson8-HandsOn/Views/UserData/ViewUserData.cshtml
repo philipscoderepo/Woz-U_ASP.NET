@@ -1,0 +1,31 @@
+﻿@model Dictionary<string, List<Lesson8_HandsOn.Models.Movie>>
+@{
+    ViewData["Title"] = "User Data";
+}
+
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Movies Watched
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Key
+                </td>
+                <td>
+                    @foreach (var movie in item.Value)
+                    {
+                        <div>@movie.Title</div>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

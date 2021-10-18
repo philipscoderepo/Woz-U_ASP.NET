@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lUzLmUHRtPZLYllBXR8+0M/4LUle4bakL0czBjIIpcQoYynSv4uxRGDFRJONZUzQ0uOBmE9ChZw3P/UyG+GWSg==",
+  "dgSpecHash": "imCFY35GquRpLNnzjWCguAkOXPOz96xGV7BuzvS9RrRLcCWtavFSR5AL3qwrrlGeIRRWMBlsLl+iYhnR7FF8nQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\SqliteFromScratch\\SqliteFromScratch.csproj",
+  "projectFilePath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson5-HandsOn\\SqliteFromScratch\\SqliteFromScratch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\patas\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.10\\microsoft.data.sqlite.core.5.0.10.nupkg.sha512",
     "C:\\Users\\patas\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",

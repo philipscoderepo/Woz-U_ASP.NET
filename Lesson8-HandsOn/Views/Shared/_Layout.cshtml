@@ -27,10 +27,13 @@
                         @if (User.IsInRole("Manager"))
                         {
                             <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="ManagerIndex">Modify Movies</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="ModifyMovies">Modify Movies</a>
                             </li>
                             <li>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Create">Add Movie</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserData" asp-action="ViewUserData">User Data</a>
                             </li>
                         }
                         <li class="nav-item">

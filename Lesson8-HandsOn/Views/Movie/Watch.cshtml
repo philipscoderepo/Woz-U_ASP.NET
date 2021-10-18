@@ -4,8 +4,15 @@
 }
 
 <div class="description-container">
-    You are watching this movie!!
-    <div>
-        <img src="~/css/movie_img/@Model.Img_Src" class="description-img" />
-    </div>
+    @if(Model == null)
+    {
+        <div>Movie not found</div>
+    }
+    else
+    {  
+        <div>
+            You are watching this movie!!
+            <img src = "~/css/movie_img/@Model.Img_Src" class="description-img"/>
+        </div>
+    }
 </div>

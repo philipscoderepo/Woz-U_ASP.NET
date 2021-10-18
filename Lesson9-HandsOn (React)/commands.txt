@@ -1,0 +1,14 @@
+//add these dependencies 
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.AspNet.WebApi.Cors
+
+//create the DB using the model
+dotnet ef dbcontext scaffold "Data Source=C:\Users\patas\OneDrive\Documents\Dev\Infosys Training\ASP.NET\Lesson9-HandsOn\car.db" Microsoft.EntityFrameworkCore.Sqlite -c CarContext -f -o Models -t Car --use-database-names
+
+//add the controllers
+dotnet aspnet-codegenerator controller -name CarController -async -api -m Car -dc CarContext -outDir Controllers
+
+dotnet aspnet-codegenerator controller -name LastDeletedController -async -api -m Car -dc LastDeletedContext -outDir Controllers

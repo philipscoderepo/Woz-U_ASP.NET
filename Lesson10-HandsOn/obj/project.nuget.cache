@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "24Vk7swXcf3easTEUD+1KAZOXRFNK2ZPY2ufY6l0d4tM/JrjxJS81VNHfYg0j9VqDI1tkIX2UdZp6M2/wxUr+w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson10-HandsOn\\TodoApiSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.0\\microsoft.extensions.configuration.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.0\\microsoft.extensions.configuration.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.0\\microsoft.extensions.configuration.binder.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\3.0.0\\microsoft.extensions.configuration.environmentvariables.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.0.0\\microsoft.extensions.configuration.fileextensions.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.0.0\\microsoft.extensions.configuration.json.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.0\\microsoft.extensions.dependencyinjection.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.0.0\\microsoft.extensions.fileproviders.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.0.0\\microsoft.extensions.fileproviders.physical.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.0.0\\microsoft.extensions.filesystemglobbing.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.logging\\3.0.0\\microsoft.extensions.logging.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.0\\microsoft.extensions.logging.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.logging.azureappservices\\3.0.0\\microsoft.extensions.logging.azureappservices.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.0.0\\microsoft.extensions.logging.configuration.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.logging.debug\\3.0.0\\microsoft.extensions.logging.debug.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.0.0\\microsoft.extensions.options.configurationextensions.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\patas\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
