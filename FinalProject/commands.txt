@@ -1,2 +1,6 @@
 //create the project
 dotnet new mvc --auth individual
+//add dependencies
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer

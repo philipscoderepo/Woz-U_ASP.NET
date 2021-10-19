@@ -69,3 +69,61 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.post-wall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 85%;
+}
+
+.post {
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: black solid;
+}
+
+.post-title{
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: .5rem;
+    font-size: x-large;
+}
+
+.post-content {
+    padding: .5rem;
+    margin-bottom: .5rem;
+    background-color: white;
+    font-size: large;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: left;
+    margin-bottom: .25rem;
+    font-size: small;
+    background-color: antiquewhite;
+}
+
+.post-info{
+    font-size: small;
+    background-color: antiquewhite;
+}
+
+.content-area{
+    height: 20rem;
+    width: 100%;
+}
