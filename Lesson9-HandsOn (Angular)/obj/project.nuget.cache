@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Su24zYtSRh3tOuqFpqxJfibnxz7shE+XBvU1vpRY4QTkoGQYjkLO+1EmwgLlAsD9y/MTB9HddajeWx5cK0GQ8w==",
+  "dgSpecHash": "Ayz9MUtf0B5yLnxOXa+ViDuK8RaCO6prynHwEBRZT0PxtZqm9+2Qw+HPQ1hL7wJCyo4vITvM6+2uaIh7jls0EA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn\\Lesson9-HandsOn.csproj",
+  "projectFilePath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn (Angular)\\Lesson9-HandsOn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\patas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\patas\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.7\\microsoft.aspnet.cors.5.2.7.nupkg.sha512",

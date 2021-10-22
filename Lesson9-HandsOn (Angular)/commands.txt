@@ -1,3 +1,9 @@
+dotnet new webapi
+
+//for angular
+ng new angular-api-eater
+ng serve
+
 //add these dependencies 
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
@@ -12,3 +18,14 @@ dotnet ef dbcontext scaffold "Data Source=C:\Users\patas\OneDrive\Documents\Dev\
 dotnet aspnet-codegenerator controller -name CarController -async -api -m Car -dc CarContext -outDir Controllers
 
 dotnet aspnet-codegenerator controller -name LastDeletedController -async -api -m Car -dc LastDeletedContext -outDir Controllers
+
+//in angular-api-eater
+modify tsconfig.json "compilerOptions": to have
+- "strictPropertyInitialization": false
+- "noImplicitReturns": false
+//cli
+ng generate class shared/models/car
+ng g m modules/car
+ng generate component modules/car/components/car
+ng generate component modules/car/components/modify-cars
+ng generate service services/car

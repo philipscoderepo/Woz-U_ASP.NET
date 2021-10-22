@@ -1,0 +1,20 @@
+<p>get-cars works!</p>
+<div>
+    <h1>Cars</h1>
+    <div>
+        <button>Add</button><br/>
+        <label>Make</label>
+        <input/><br/>
+        <label>Model</label>
+        <input/><br/>
+        <label>Year</label>
+        <input/>
+    </div>
+    <button>Modify</button>
+    <div *ngFor="let car of cars">
+        <div>
+            {{car.id}}. {{car.make}} {{car.model}} {{car.year}}
+            <button>Delete</button>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,10 @@
-//add these dependencies 
+dotnet new webapi
+
+//for react
+npx create-react-app react-api-eater
+npm start
+
+//add these dependencies for .net
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer

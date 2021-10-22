@@ -9331,11 +9331,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn\\Lesson9-HandsOn.csproj",
+      "projectUniqueName": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn (Angular)\\Lesson9-HandsOn.csproj",
       "projectName": "Lesson9-HandsOn",
-      "projectPath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn\\Lesson9-HandsOn.csproj",
+      "projectPath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn (Angular)\\Lesson9-HandsOn.csproj",
       "packagesPath": "C:\\Users\\patas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn\\obj\\",
+      "outputPath": "C:\\Users\\patas\\OneDrive\\Documents\\Dev\\Infosys Training\\ASP.NET\\Lesson9-HandsOn (Angular)\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
